@@ -1,0 +1,277 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: #f6f7f9;
+	--hover-icon: #eeedeb;
+	--generate-bg-color: #71c3ff;
+	--generate-hv-color: #41aefd;
+	--text-color: #4d4d4d;
+	--disabled-color: #787777;
+	--red: #dc0c0c;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 0;
+	gap: 5%;
+}
+
+#status {
+	height: 500px;
+	width: 500px;
+}
+
+#status img {
+	width: 100%;
+	height: 100%;
+}
+
+#box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	height: 400px;
+	padding-inline: 30px;
+	border-radius: 15px;
+	border: 3px solid var(--text-color);
+}
+
+#box h1 {
+	font-size: 2.5rem;
+	background: transparent;
+}
+
+#box #input-field {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	gap: 5px;
+	border-bottom: 3px solid var(--text-color);
+	padding-bottom: 8px;
+}
+
+#box #input-field.invalid {
+	animation: inputError 0.5s alternate;
+	border-bottom: 3px solid var(--red);
+}
+
+#box #input-field > * {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: var(--text-color);
+}
+
+#box #input-field.invalid > * {
+	color: var(--red);
+}
+
+#box #input-field input {
+	font-size: 1.125rem;
+	width: 100%;
+}
+
+#box #input-field.invalid input::placeholder {
+	color: var(--red);
+}
+
+#box #input-field button#paste {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.2s all ease-in-out;
+}
+
+#box #input-field button#paste:is(:hover, :focus) {
+	background-color: var(--hover-icon);
+}
+
+#box #action-area {
+	display: flex;
+	gap: 20px;
+}
+
+#box #action-area button.action-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 10px;
+	gap: 10px;
+	color: var(--text-color);
+	border: none;
+	outline: none;
+	border-radius: 15px;
+	font-size: 1.125rem;
+	cursor: pointer;
+	transition: 0.2s all ease-in-out;
+}
+
+#box #action-area button#generate {
+	background-color: var(--generate-bg-color);
+	color: var(--bg-color);
+}
+
+#box #action-area button#generate:is(:hover, :focus) {
+	background-color: var(--generate-hv-color);
+}
+
+#box #action-area button#generate:is(:hover, :focus) svg {
+	animation: rotate 1.5s forwards;
+}
+
+#box #action-area button#download {
+	background-color: transparent;
+	border: 3px solid var(--text-color);
+}
+
+#box #action-area button#download:disabled {
+	background: var(--text-color);
+	color: var(--bg-color);
+	opacity: 0.75;
+	cursor: not-allowed;
+}
+
+#box #action-area button#download:is(:hover, :focus) {
+	background-color: #4d4d4d;
+	color: var(--bg-color);
+}
+
+.icon {
+	height: 30px;
+}
+
+footer {
+	font-size: 1.125rem;
+	text-align: center;
+	margin-block: 0.5rem 1rem;
+	margin-inline: 30px;
+}
+
+footer p > a {
+	font-weight: bold;
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+@media (max-width: 1150px) {
+	main {
+		gap: 20px;
+	}
+
+	#status {
+		height: 400px;
+		width: fit-content;
+	}
+
+	#box {
+		height: 350px;
+	}
+}
+
+@media (max-width: 1000px) {
+	#box h1 {
+		font-size: 2.25rem;
+	}
+}
+
+@media (max-width: 950px) {
+	main {
+		margin-top: 20px;
+		margin-inline: 30px;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	#status {
+		height: 350px;
+		width: fit-content;
+	}
+
+	#box {
+		height: fit-content;
+		padding: 0;
+		width: 350px;
+		gap: 10px;
+		border: none;
+	}
+
+	#box h1 {
+		text-align: center;
+		font-size: 1.75rem;
+	}
+}
+
+@media (max-width: 450px) {
+	#status {
+		width: 100%;
+		max-width: 350px;
+		height: fit-content;
+	}
+
+	#box {
+		height: fit-content;
+		width: 100%;
+	}
+
+	#box h1 {
+		font-size: 1.625rem;
+	}
+}
+
+@media (max-width: 340px) {
+	footer,
+	#box #input-field input,
+	#box #action-area button.action-btn {
+		font-size: 1rem;
+	}
+
+	.icon {
+		height: 25px;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes inputError {
+	25% {
+		transform: translateX(-5px);
+	}
+
+	50% {
+		transform: translateX(5px);
+	}
+
+	75% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
