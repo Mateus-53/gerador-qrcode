@@ -1,8 +1,22 @@
-# Gerador de QR Code
-## Descrição:
-* Um gerador de QR Code feito usando a API goqr.me, que ao colocar uma URL ou texto gera seu QR Code.
+# Gerador de QR CODE
+![GitHub last commit](https://img.shields.io/github/last-commit/Mateus-53/gerador-qrcode)
+![GitHub Repo stars](https://img.shields.io/github/stars/Mateus-53/gerador-qrcode)
+![GitHub License](https://img.shields.io/github/license/Mateus-53/gerador-qrcode)
 
-## Tecnologias Utilizadas:
-![Html-Logo](	https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Css-Logo](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Javascript-Logo](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+Este projeto utiliza a API [goqr.me](https://goqr.me/api/) para criar QR Codes de forma fácil e rápida.
+
+## :eyes: Layout
+![qrcode-generator-preview](https://github.com/user-attachments/assets/8b31ec12-24d7-4cc4-b0c3-dab335b62d92)
+
+Acesse o projeto [aqui](https://mateus-53.github.io/gerador-qrcode/).
+
+## :sparkles: Funcionalidades
+
+- `Colar conteúdo da área de transferência`: Permite inserir rapidamente informações copiadas do dispositivo para gerar um QR Code.
+- `Baixar a imagem do QR CODE gerado`: Permite baixar a imagem do QR Code em formato PNG para uso e compartilhamento.
+
+## :rocket: Tecnologias Utilizadas
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,figma,git)](https://skillicons.dev)
+
+## Licença
+The [MIT License](./LICENSE) (MIT)
