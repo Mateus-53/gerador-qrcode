@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style/style.css" />
-    <script src="js/script.js" defer></script>
-    <title>Gerador de QR Code</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="area">
-          <h1>Gerador de QR Code</h1>
-          <label for="qrValue"
-            >Insira um texto ou uma URL para gerar o QR Code:</label
-          >
-        </div>
-        <div class="area">
-          <input
-            type="text"
-            class="input"
-            id="qrValue"
-            placeholder="Insira aqui"
-            spellcheck="false"
-          />
-        </div>
-        <div class="area">
-          <button type="submit" class="createCode">Gerar QR CODE</button>
-        </div>
-        <div class="area">
-          <img src="" alt="" class="qrImg" />
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js" defer></script>
+  <title>Gerador de QR Code</title>
+</head>
+
+<body>
+  <main>
+    <div id="status">
+      <img src="assets/images/void-image.svg" alt="Imagem vazia">
+    </div>
+    <div id="box">
+      <h1>GERADOR DE QR CODE</h1>
+      <div id="input-field">
+        <input type="text" id="input-value" spellcheck="false" autocomplete="off"
+          placeholder="Insira sua URL ou texto aqui">
+        <button type="button" id="paste" title="Colar">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+          </svg>
+        </button>
+      </div>
+      <div id="action-area">
+        <button type="button" class="action-btn" id="generate">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+          Gerar
+        </button>
+        <button type="button" class="action-btn" id="download" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="icon">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          Download
+        </button>
       </div>
     </div>
-  </body>
+  </main>
+  <footer>
+    <p>Desenvolvido com ❤️ por <a href="https://github.com/Mateus-53" target="_blank">Mateus Ferreira</a></p>
+  </footer>
+</body>
+
 </html>
